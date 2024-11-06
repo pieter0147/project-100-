@@ -30,6 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblPosisi = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,9 +41,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtName = new System.Windows.Forms.Label();
-            this.txtPosisi = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblTgglLahir = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,9 +65,13 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Cyan;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.txtUsername);
-            this.panel2.Controls.Add(this.txtPosisi);
-            this.panel2.Controls.Add(this.txtName);
+            this.panel2.Controls.Add(this.lblId);
+            this.panel2.Controls.Add(this.lblTgglLahir);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.lblUsername);
+            this.panel2.Controls.Add(this.lblPosisi);
+            this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -74,6 +82,37 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1327, 519);
             this.panel2.TabIndex = 8;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(247, 215);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(63, 18);
+            this.lblUsername.TabIndex = 10;
+            this.lblUsername.Text = "Nama: ";
+            // 
+            // lblPosisi
+            // 
+            this.lblPosisi.AutoSize = true;
+            this.lblPosisi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosisi.Location = new System.Drawing.Point(247, 181);
+            this.lblPosisi.Name = "lblPosisi";
+            this.lblPosisi.Size = new System.Drawing.Size(63, 18);
+            this.lblPosisi.TabIndex = 9;
+            this.lblPosisi.Text = "Nama: ";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(247, 145);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(63, 18);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "Nama: ";
+            this.lblName.Click += new System.EventHandler(this.LblName_Click);
             // 
             // label7
             // 
@@ -88,18 +127,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(126, 274);
+            this.label6.Location = new System.Drawing.Point(126, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Posisi";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(126, 348);
+            this.label5.Location = new System.Drawing.Point(126, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 18);
             this.label5.TabIndex = 5;
@@ -109,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(126, 209);
+            this.label4.Location = new System.Drawing.Point(126, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 18);
             this.label4.TabIndex = 4;
@@ -156,35 +195,46 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // txtName
+            // label8
             // 
-            this.txtName.AutoSize = true;
-            this.txtName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(247, 209);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(63, 18);
-            this.txtName.TabIndex = 8;
-            this.txtName.Text = "Nama: ";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(126, 256);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 18);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Id";
             // 
-            // txtPosisi
+            // label9
             // 
-            this.txtPosisi.AutoSize = true;
-            this.txtPosisi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosisi.Location = new System.Drawing.Point(247, 274);
-            this.txtPosisi.Name = "txtPosisi";
-            this.txtPosisi.Size = new System.Drawing.Size(63, 18);
-            this.txtPosisi.TabIndex = 9;
-            this.txtPosisi.Text = "Nama: ";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(126, 291);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 18);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "tanggal lahir";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // txtUsername
+            // lblTgglLahir
             // 
-            this.txtUsername.AutoSize = true;
-            this.txtUsername.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(247, 348);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(63, 18);
-            this.txtUsername.TabIndex = 10;
-            this.txtUsername.Text = "Nama: ";
+            this.lblTgglLahir.AutoSize = true;
+            this.lblTgglLahir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTgglLahir.Location = new System.Drawing.Point(247, 291);
+            this.lblTgglLahir.Name = "lblTgglLahir";
+            this.lblTgglLahir.Size = new System.Drawing.Size(63, 18);
+            this.lblTgglLahir.TabIndex = 13;
+            this.lblTgglLahir.Text = "Nama: ";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(247, 256);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(63, 18);
+            this.lblId.TabIndex = 14;
+            this.lblId.Text = "Nama: ";
             // 
             // profile_employee
             // 
@@ -194,8 +244,10 @@
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel1);
             this.Name = "profile_employee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "profile_employee";
-            this.Load += new System.EventHandler(this.profile_employee_Load);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Profile_employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -217,8 +269,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label txtUsername;
-        private System.Windows.Forms.Label txtPosisi;
-        private System.Windows.Forms.Label txtName;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblPosisi;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblTgglLahir;
     }
 }

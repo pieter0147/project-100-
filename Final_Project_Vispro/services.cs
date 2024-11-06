@@ -7,47 +7,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Final_Project_Vispro
 {
     public partial class services : Form
     {
-        private int id_user;
+       
+        private int id;
         public services(int param)
         {
+        
+
             InitializeComponent();
-            id_user = param;
+            id = param;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            paket_mobil paket_Mobil = new paket_mobil();
-            paket_Mobil.Show();
+            TipeMobil tipemobil = new TipeMobil(id);
+            tipemobil.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
-            paket_motor paket_Motor = new paket_motor();
-            paket_Motor.Show();
+            TipeMotor tipemotor = new TipeMotor(id);
+            tipemotor.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             sign_in_employe sign_In_Employe = new sign_in_employe();
             sign_In_Employe.Show();
             this.Hide();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void services_Load(object sender, EventArgs e)
         {
-            profile_employee frmprof = new profile_employee(id_user);
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            profile_employee frmprof = new profile_employee(id);
             frmprof.Show();
             this.Hide();
         }

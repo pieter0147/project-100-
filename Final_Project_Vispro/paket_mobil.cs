@@ -18,15 +18,17 @@ namespace Final_Project_Vispro
         private MySqlCommand perintah;
         private DataSet ds = new DataSet();
         private string alamat, query;
-        public paket_mobil()
+        private int param;
+        public paket_mobil(int id)
         {
             alamat = "server=localhost; database=db_carwashh; username=root; password=;";
             koneksi = new MySqlConnection(alamat);
 
             InitializeComponent();
+            param = id;
         }
 
-        private void paket_mobil_Load(object sender, EventArgs e)
+        private void Paket_mobil_Load(object sender, EventArgs e)
         {
             try
             {
@@ -53,59 +55,60 @@ namespace Final_Project_Vispro
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void txtPackage_TextChanged(object sender, EventArgs e)
+        private void TxtPackage_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtDate_ValueChanged(object sender, EventArgs e)
+        private void TxtDate_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtLicensePlate_TextChanged(object sender, EventArgs e)
+        private void TxtLicensePlate_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtCost_TextChanged(object sender, EventArgs e)
+        private void TxtCost_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
-            services services = new services();
+            services services = new services(param);
             services.Show();
             this.Hide();
+
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtLicensePlate.Text))
             {
@@ -131,7 +134,7 @@ namespace Final_Project_Vispro
                         if (res == 1)
                         {
                             MessageBox.Show("Insert Data Suksess ...");
-                            paket_mobil_Load(null, null);
+                            Paket_mobil_Load(null, null);
                         }
                         else
                         {

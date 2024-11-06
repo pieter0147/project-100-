@@ -60,7 +60,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // txtUsername2
             // 
@@ -77,7 +77,7 @@
             this.btnSearch2.TabIndex = 8;
             this.btnSearch2.Text = "Search";
             this.btnSearch2.UseVisualStyleBackColor = true;
-            this.btnSearch2.Click += new System.EventHandler(this.btnSearch2_Click);
+            this.btnSearch2.Click += new System.EventHandler(this.BtnSearch2_Click);
             // 
             // txtUsername1
             // 
@@ -85,7 +85,7 @@
             this.txtUsername1.Name = "txtUsername1";
             this.txtUsername1.Size = new System.Drawing.Size(192, 26);
             this.txtUsername1.TabIndex = 7;
-            this.txtUsername1.TextChanged += new System.EventHandler(this.txtUsername1_TextChanged);
+            this.txtUsername1.TextChanged += new System.EventHandler(this.TxtUsername1_TextChanged);
             // 
             // btnSearch1
             // 
@@ -95,7 +95,7 @@
             this.btnSearch1.TabIndex = 6;
             this.btnSearch1.Text = "Search";
             this.btnSearch1.UseVisualStyleBackColor = true;
-            this.btnSearch1.Click += new System.EventHandler(this.btnSearch1_Click);
+            this.btnSearch1.Click += new System.EventHandler(this.BtnSearch1_Click);
             // 
             // dataGridView2
             // 
@@ -106,7 +106,7 @@
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(1584, 312);
             this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
             // 
             // dataGridView1
             // 
@@ -138,7 +138,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "akun";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // pictureBox1
             // 
@@ -160,7 +160,7 @@
             this.Name = "history";
             this.Text = "history";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.history_Load);
+            this.Load += new System.EventHandler(this.History_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

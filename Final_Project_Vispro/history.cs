@@ -27,12 +27,12 @@ namespace Final_Project_Vispro
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void btnSearch1_Click(object sender, EventArgs e)
+        private void BtnSearch1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace Final_Project_Vispro
                     else
                     {
                         MessageBox.Show("Data Tidak Ada !!");
-                        history_Load(null, null);
+                        History_Load(null, null);
                     }
 
                 }
@@ -73,7 +73,7 @@ namespace Final_Project_Vispro
 
         }
 
-        private void history_Load(object sender, EventArgs e)
+        private void History_Load(object sender, EventArgs e)
         {
             try
             {
@@ -121,7 +121,7 @@ namespace Final_Project_Vispro
         }
 
 
-        private void btnSearch2_Click(object sender, EventArgs e)
+        private void BtnSearch2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -146,7 +146,7 @@ namespace Final_Project_Vispro
                     else
                     {
                         MessageBox.Show("Data Tidak Ada !!");
-                        history_Load(null, null);
+                        History_Load(null, null);
                     }
 
                 }
@@ -161,17 +161,17 @@ namespace Final_Project_Vispro
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void txtUsername1_TextChanged(object sender, EventArgs e)
+        private void TxtUsername1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             admin admin = new admin();
             admin.Show();

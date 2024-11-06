@@ -41,7 +41,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(317, 26);
             this.txtUsername.TabIndex = 23;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.TextChanged += new System.EventHandler(this.TxtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -59,7 +59,7 @@
             this.button1.Text = "Login";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnUpdate
             // 
@@ -69,7 +69,7 @@
             this.btnUpdate.TabIndex = 28;
             this.btnUpdate.Text = "sign in";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.button2_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.Button2_Click);
             // 
             // employe_log
             // 
@@ -87,7 +87,7 @@
             this.Name = "employe_log";
             this.Text = "employe_log";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.employe_log_Load);
+            this.Load += new System.EventHandler(this.Employe_log_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

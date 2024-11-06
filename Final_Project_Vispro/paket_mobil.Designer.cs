@@ -43,6 +43,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +64,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // button4
             // 
@@ -73,7 +74,7 @@
             this.button4.TabIndex = 69;
             this.button4.Text = "back";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button3
             // 
@@ -84,7 +85,7 @@
             this.button3.TabIndex = 68;
             this.button3.Text = resources.GetString("button3.Text");
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button2
             // 
@@ -96,7 +97,7 @@
             this.button2.Text = "Basic Wash \r\n  Rp.100.000\r\n\r\n-Pencucian eksterior\r\n-Pengeringan mobil\r\n-pembersih" +
     "an sederhana\r\n  (roda dan ban)\r\n-Waktu pengerjaan 20-30mnt\r\n";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -109,11 +110,12 @@
     "uh \r\n-Pembersihan kolong mobil\r\n-Vakum karpet dan kursi\r\n-Waktu pengerjaan 45-60" +
     "mnt\r\n\r\n";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Controls.Add(this.btnPrint);
             this.panel2.Controls.Add(this.txtPackage);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.txtDate);
@@ -131,7 +133,7 @@
             this.txtPackage.Size = new System.Drawing.Size(100, 26);
             this.txtPackage.TabIndex = 62;
             this.txtPackage.Text = "Package";
-            this.txtPackage.TextChanged += new System.EventHandler(this.txtPackage_TextChanged);
+            this.txtPackage.TextChanged += new System.EventHandler(this.TxtPackage_TextChanged);
             // 
             // btnSave
             // 
@@ -141,7 +143,7 @@
             this.btnSave.TabIndex = 64;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtDate
             // 
@@ -149,7 +151,7 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(272, 26);
             this.txtDate.TabIndex = 55;
-            this.txtDate.ValueChanged += new System.EventHandler(this.txtDate_ValueChanged);
+            this.txtDate.ValueChanged += new System.EventHandler(this.TxtDate_ValueChanged);
             // 
             // txtCost
             // 
@@ -158,7 +160,7 @@
             this.txtCost.Size = new System.Drawing.Size(100, 26);
             this.txtCost.TabIndex = 63;
             this.txtCost.Text = "Cost";
-            this.txtCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
+            this.txtCost.TextChanged += new System.EventHandler(this.TxtCost_TextChanged);
             // 
             // txtLicensePlate
             // 
@@ -167,7 +169,7 @@
             this.txtLicensePlate.Size = new System.Drawing.Size(100, 26);
             this.txtLicensePlate.TabIndex = 61;
             this.txtLicensePlate.Text = "License";
-            this.txtLicensePlate.TextChanged += new System.EventHandler(this.txtLicensePlate_TextChanged);
+            this.txtLicensePlate.TextChanged += new System.EventHandler(this.TxtLicensePlate_TextChanged);
             // 
             // label8
             // 
@@ -200,6 +202,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(301, 121);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(100, 26);
+            this.btnPrint.TabIndex = 96;
+            this.btnPrint.Text = "print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            // 
             // paket_mobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -210,7 +221,7 @@
             this.Name = "paket_mobil";
             this.Text = "paket_mobil";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.paket_mobil_Load);
+            this.Load += new System.EventHandler(this.Paket_mobil_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

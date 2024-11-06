@@ -25,29 +25,30 @@ namespace Final_Project_Vispro
             koneksi = new MySqlConnection(alamat);
 
             InitializeComponent();
+
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
+        private void TxtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void Label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void sign_in_employe_Load(object sender, EventArgs e)
+        private void Sign_in_employe_Load(object sender, EventArgs e)
         {
             try
             {
@@ -68,7 +69,12 @@ namespace Final_Project_Vispro
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -87,7 +93,7 @@ namespace Final_Project_Vispro
                     if (res == 1)
                     {
                         MessageBox.Show("Insert Data Suksess ...");
-                        sign_in_employe_Load(null, null);
+                        Sign_in_employe_Load(null, null);
                     }
                     else
                     {

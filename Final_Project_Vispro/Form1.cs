@@ -15,21 +15,22 @@ namespace Final_Project_Vispro
         public Form1()
         {
             InitializeComponent();
+
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             employe_log employe_Log = new employe_log();
             employe_Log.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             admin_log admin_log = new admin_log();
             admin_log.Show();

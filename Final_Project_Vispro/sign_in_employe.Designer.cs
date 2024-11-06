@@ -61,6 +61,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label4
             // 
@@ -70,7 +71,7 @@
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 38;
             this.label4.Text = "Name";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // txtName
             // 
@@ -88,7 +89,7 @@
             this.btnSave.Text = "Sign In";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
@@ -98,7 +99,7 @@
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 34;
             this.label3.Text = "Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label2
             // 
@@ -115,7 +116,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(317, 26);
             this.txtPassword.TabIndex = 32;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -123,7 +124,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(317, 26);
             this.txtUsername.TabIndex = 31;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.txtUsername.TextChanged += new System.EventHandler(this.TxtUsername_TextChanged);
             // 
             // pictureBox2
             // 
@@ -165,7 +166,7 @@
             this.Name = "sign_in_employe";
             this.RightToLeftLayout = true;
             this.Text = "sign_in_employe";
-            this.Load += new System.EventHandler(this.sign_in_employe_Load);
+            this.Load += new System.EventHandler(this.Sign_in_employe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

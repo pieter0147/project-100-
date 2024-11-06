@@ -20,14 +20,16 @@ namespace Final_Project_Vispro
 
         private DataSet ds = new DataSet();
         private string alamat, query;
+        private int id;
         public employe_log()
         {
             alamat = "server=localhost; database=db_carwashh; username=root; password=;";
             koneksi = new MySqlConnection(alamat);
             InitializeComponent();
+             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             sign_in_employe sign_In_Employe = new sign_in_employe();
             sign_In_Employe.Show();
@@ -66,42 +68,39 @@ namespace Final_Project_Vispro
             //}
         }
 
-        private void employe_log_Load(object sender, EventArgs e)
+        private void Employe_log_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    koneksi.Open();
-            //    query = string.Format("select * from tbl_login");
-            //    perintah = new MySqlCommand(query, koneksi);
-            //    adapter = new MySqlDataAdapter(perintah);
-            //    perintah.ExecuteNonQuery();
-            //    ds.Clear();
-            //    adapter.Fill(ds);
-            //    koneksi.Close();
+            try
+            {
+                koneksi.Open();
+                query = string.Format("select * from tbl_login");
+                perintah = new MySqlCommand(query, koneksi);
+                adapter = new MySqlDataAdapter(perintah);
+                perintah.ExecuteNonQuery();
+                ds.Clear();
+                adapter.Fill(ds);
+                koneksi.Close();
 
-
-
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString());
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
+        private void TxtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -118,10 +117,18 @@ namespace Final_Project_Vispro
                     foreach (DataRow kolom in ds.Tables[0].Rows)
                     {
                         string sandi;
+                        
                         sandi = kolom["password"].ToString();
+
+                        string id_user = kolom["user_id"].ToString();
+                        int id;
+                        id = Convert.ToInt32(id_user);
+                      
+
                         if (sandi == txtPassword.Text)
                         {
-                            services services = new services(kolom["user_id"].ToString());
+                            
+                            services services = new services(id);
                             services.Show();
                             this.Hide();
                         }

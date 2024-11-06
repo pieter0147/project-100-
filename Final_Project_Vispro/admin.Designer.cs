@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblname = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -42,8 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,6 +83,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1327, 519);
             this.panel2.TabIndex = 8;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(210, 168);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(205, 26);
+            this.txtName.TabIndex = 13;
+            // 
+            // lblname
+            // 
+            this.lblname.AutoSize = true;
+            this.lblname.Location = new System.Drawing.Point(70, 168);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(51, 20);
+            this.lblname.TabIndex = 12;
+            this.lblname.Text = "Name";
             // 
             // button6
             // 
@@ -196,22 +212,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "SkyBlue Wash";
             // 
-            // lblname
-            // 
-            this.lblname.AutoSize = true;
-            this.lblname.Location = new System.Drawing.Point(70, 168);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(51, 20);
-            this.lblname.TabIndex = 12;
-            this.lblname.Text = "Name";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(210, 168);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(205, 26);
-            this.txtName.TabIndex = 13;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Final_Project_Vispro.Properties.Resources.icons8_automatic_car_wash_100;
@@ -230,7 +230,9 @@
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel1);
             this.Name = "admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.admin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

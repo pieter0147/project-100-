@@ -1,6 +1,6 @@
 ﻿namespace Final_Project_Vispro
 {
-    partial class paket_motor
+    partial class paketMotorKecil
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPackage = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -54,16 +53,14 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(75, 80);
+            this.panel1.Location = new System.Drawing.Point(69, 62);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1760, 900);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 4;
             // 
             // btnPrint
             // 
@@ -73,7 +70,6 @@
             this.btnPrint.TabIndex = 95;
             this.btnPrint.Text = "print";
             this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // button2
             // 
@@ -83,12 +79,12 @@
             this.button2.TabIndex = 94;
             this.button2.Text = "back\r\n";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Cyan;
-            this.button1.Location = new System.Drawing.Point(680, 421);
+            this.button1.Location = new System.Drawing.Point(961, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(400, 300);
             this.button1.TabIndex = 93;
@@ -99,25 +95,14 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Cyan;
-            this.button5.Location = new System.Drawing.Point(221, 421);
+            this.button5.Location = new System.Drawing.Point(414, 421);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(400, 300);
             this.button5.TabIndex = 92;
             this.button5.Text = "Basic wash:\r\n  Rp.50.000\r\n\r\n-Bagian luar motor\r\n-Pengguna sabun dan \r\n  air berte" +
     "kanan\r\n-Pengering Premium\r\n\r\n\r\n";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Cyan;
-            this.button6.Location = new System.Drawing.Point(1139, 421);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(400, 300);
-            this.button6.TabIndex = 91;
-            this.button6.Text = "Premium\r\n  Rp.100.000\r\n\r\n-Pembersih komprehensif\r\n-Penggunaan produk pembersih \r\n" +
-    "  premium\r\n-Membersihkan detailing kecil\r\n-Pengecekan ringan kondisi rantai \r\n  " +
-    "atau rem\r\n";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel2
             // 
@@ -149,7 +134,6 @@
             this.btnSave.TabIndex = 64;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtDate
             // 
@@ -205,17 +189,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // paket_motor
+            // paketMotorKecil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel1);
-            this.Name = "paket_motor";
-            this.Text = "paket_motor";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Paket_motor_Load);
+            this.KeyPreview = true;
+            this.Name = "paketMotorKecil";
+            this.Text = "paketMotorKecil";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -228,11 +211,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtPackage;
         private System.Windows.Forms.Button btnSave;
@@ -240,7 +222,7 @@
         private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.TextBox txtLicensePlate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

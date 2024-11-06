@@ -37,23 +37,23 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Image = global::Final_Project_Vispro.Properties.Resources.icons8_employee_100;
-            this.button1.Location = new System.Drawing.Point(656, 324);
+            this.button1.Location = new System.Drawing.Point(657, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 243);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Image = global::Final_Project_Vispro.Properties.Resources.icons8_admin_100;
-            this.button2.Location = new System.Drawing.Point(1058, 332);
+            this.button2.Location = new System.Drawing.Point(1059, 397);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(177, 235);
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Form1
             // 
@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

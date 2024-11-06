@@ -36,11 +36,14 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data.EntityFramework, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySql.Web, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +79,12 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="employe_log.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +97,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStruk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStruk.Designer.cs">
+      <DependentUpon>FrmStruk.cs</DependentUpon>
+    </Compile>
     <Compile Include="history.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="history.Designer.cs">
       <DependentUpon>history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paketMobilKecil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paketMobilKecil.Designer.cs">
+      <DependentUpon>paketMobilKecil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paketMotorKecil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paketMotorKecil.Designer.cs">
+      <DependentUpon>paketMotorKecil.cs</DependentUpon>
     </Compile>
     <Compile Include="paket_mobil.cs">
       <SubType>Form</SubType>
@@ -126,6 +153,18 @@
     <Compile Include="sign_in_employe.Designer.cs">
       <DependentUpon>sign_in_employe.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipeMobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipeMobil.Designer.cs">
+      <DependentUpon>TipeMobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipeMotor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipeMotor.Designer.cs">
+      <DependentUpon>TipeMotor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,14 +178,27 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="employe_log.resx">
       <DependentUpon>employe_log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStruk.resx">
+      <DependentUpon>FrmStruk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="history.resx">
       <DependentUpon>history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paketMobilKecil.resx">
+      <DependentUpon>paketMobilKecil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paketMotorKecil.resx">
+      <DependentUpon>paketMotorKecil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="paket_mobil.resx">
       <DependentUpon>paket_mobil.cs</DependentUpon>
@@ -172,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sign_in_employe.resx">
       <DependentUpon>sign_in_employe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipeMobil.resx">
+      <DependentUpon>TipeMobil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipeMotor.resx">
+      <DependentUpon>TipeMotor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
